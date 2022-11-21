@@ -34,3 +34,44 @@
   }
 }
 
+//flex-boxes
+@mixin flex-r-w {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin flex-r-nw {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin flex-c-w {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+@mixin flex-c-nw {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+//box-shadows
+@mixin box-shadow {
+  box-shadow: (0px 4px 4px hsla(0 0% 0% / 16%));
+}
+
+@mixin box-shadow-hov {
+  box-shadow: (0px 8px 8px hsla(0 0% 0% / 16%));
+}
+
+//buttons
+@mixin btn-bg($color: $primary-color, $color-two: $secondary-color) {
+  @include box-shadow;
+  background: linear-gradient(to top, $color, $color-two);
+}
+
+//buttons hover
+@mixin btn-bg-hov($color: $primary-color, $color-two: $secondary-color) {
+  @include box-shadow-hov;
+  background: linear-gradient(to top, lighten($color, 5), lighten($color-two, 5));
+}
