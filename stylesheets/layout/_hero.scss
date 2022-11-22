@@ -1,10 +1,10 @@
 .hero {
   @include flex-c-nw;
+  @include pad-cont;
   align-items: center;
 
   background-color: $light-grey;
 
-  padding: 44px 16px 56px 16px;
   text-align: center;
 
   & h1 {

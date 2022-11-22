@@ -75,3 +75,8 @@
   @include box-shadow-hov;
   background: linear-gradient(to top, lighten($color, 5), lighten($color-two, 5));
 }
+
+/*container padding suppervisor*/
+@mixin pad-cont {
+  padding: (46px 16px 56px 16px);
+}

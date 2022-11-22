@@ -37,3 +37,7 @@ a {
 body {
   @include flex-c-nw;
 }
+
+ul {
+  padding: 0;
+}
