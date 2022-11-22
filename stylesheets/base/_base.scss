@@ -41,3 +41,13 @@ body {
 ul {
   padding: 0;
 }
+
+#primary-gradient-color {
+  stop-color: $primary-color;
+  stop-opacity: 1;
+}
+
+#secondary-gradient-color {
+  stop-color: $secondary-color;
+  stop-opacity: 1;
+}
