@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*container padding suppervisor*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -518,39 +519,87 @@ header {
   left: -0.8rem;
 }
 
+/*conteneur principal*/
 .lay-title-tile {
-  display: flex;
-  flex-flow: row wrap;
   padding: 46px 16px 56px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
   background-color: hsl(0deg, 0%, 97%);
+  /*tuile*/
 }
-.lay-title-tile > * {
-  width: 100%;
+.lay-title-tile h2 {
+  grid-column: 1/-1;
 }
 .lay-title-tile article {
   box-shadow: 0px 4px 4px hsla(0deg, 0%, 0%, 0.16);
+  display: flex;
+  flex-flow: row wrap;
+  --img-scale: 1.001;
   position: relative;
+  flex: 1 0 300px;
+  justify-content: space-between;
+  gap: 5%;
   border-radius: 16px;
   background-color: white;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  /*pseudo élément filmant la tuile afin de la rendre cliquable dans son entièreté*/
+  /*hover de la tuile*/
+}
+.lay-title-tile article figure {
+  height: 170px;
+  margin: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
 }
 .lay-title-tile article img {
-  border-radius: 16px 16px 0 0;
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
+  max-width: 100%;
+  transform: scale(var(--img-scale));
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
 }
 .lay-title-tile article svg {
   width: 1.8rem;
   fill: none;
+  stroke: black;
   stroke-linecap: round;
   stroke-linejoin: round;
-  fill: none;
-  stroke: black;
+  /*permet de le remonter au dessus sur pseudo élément a::after*/
+  z-index: 1;
 }
 .lay-title-tile article svg:hover {
   fill: url(#theFillingYourHeartGradient);
   stroke: url(#theFillingYourHeartGradient);
+}
+.lay-title-tile article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+.lay-title-tile article:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 8px hsla(0deg, 0%, 0%, 0.16);
+  --img-scale: 1.05;
+}
+.lay-title-tile__lower-half-cont {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px;
+}
+.lay-title-tile__lower-half-copy {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-right: 16px;
+}
+.lay-title-tile__lower-half-copy h3,
+.lay-title-tile__lower-half-copy p {
+  display: block;
+  width: fit-content;
 }
 
 .btn {
