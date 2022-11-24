@@ -13,10 +13,10 @@
 @import "layout/header", "layout/footer", "layout/hero", "layout/title-list", "layout/title-tile";
 
 // 5. Components
-@import "components/button", "components/location", "components/tile-tag", "components/like", "components/tile";
+@import "components/button", "components/location", "components/tile-tag", "components/like", "components/restaurant-tile", "components/menu-tile", "components/add-to-cart";
 
 // 6. Page-specific styles
-@import "pages/home";
+@import "pages/home", "pages/restaurants";
 
 // 7. Themes
 @import "themes/default";

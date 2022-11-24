@@ -1,0 +1,40 @@
+.menu-tile {
+  @include flex-r-nw;
+  @include box-shadow;
+
+  overflow: hidden;
+
+  --add-to-cart: -4rem;
+  --add-to-cart-i: 180deg;
+
+  background-color: white;
+  margin-bottom: 1rem;
+
+  border-radius: 1rem;
+
+  &__menu-text {
+    padding: 1rem;
+    width: 100%;
+    overflow: hidden;
+
+    h3,
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__menu-price {
+    font-weight: map-get($font-weight, bold);
+
+    margin-top: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    --add-to-cart: 0rem;
+    --add-to-cart-i: 0deg;
+  }
+}

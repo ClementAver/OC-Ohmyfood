@@ -4,6 +4,7 @@
 
 footer {
   @include flex-c-nw;
+  z-index: 100;
 
   @media screen and (min-width: map-get($breakpoints, small)) {
     align-items: center;
@@ -14,13 +15,13 @@ footer {
   padding: 16px;
   padding-bottom: 32px;
 
-  & svg {
+  svg {
     filter: invert(1);
     width: 7rem;
     margin-bottom: 16px;
   }
 
-  & a {
+  a {
     color: white;
     line-height: 1.8;
 
