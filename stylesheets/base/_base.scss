@@ -9,6 +9,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  @include flex-c-nw;
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
@@ -29,7 +33,21 @@ a {
   text-decoration: none;
 
   @include on-event {
-    color: $text-color;
-    text-decoration: underline;
+    color: $brand-color;
+    //  text-decoration: underline;
   }
+}
+
+ul {
+  padding: 0;
+}
+
+#primary-gradient-color {
+  stop-color: $primary-color;
+  stop-opacity: 1;
+}
+
+#secondary-gradient-color {
+  stop-color: $secondary-color;
+  stop-opacity: 1;
 }

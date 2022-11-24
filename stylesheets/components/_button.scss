@@ -2,44 +2,18 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
-$cta-map: (
-  premier: $primary-color,
-  second: $secondary-color,
-  troisieme: $tertiary-color,
-);
+.btn {
+  @include cta-bg;
+  width: fit-content;
+  padding: 16px;
+  border-radius: 32px;
+  color: white;
+  font-weight: map-get($font-weight, semi-bold);
+  transition: box-shadow 0.3s ease-in-out;
 
-@each $number, $color in $cta-map {
-  .#{$number} {
-    padding: 8px 16px;
-
-    border: none;
-    border-radius: 4px;
-
-    //si la luminosité de la teinte est égale ou exède 70%
-    @if (lightness($color) >= 70%) {
-      color: $color;
-      //assombrit le fond de 40%
-      background-color: mix($color, hsl(0, 0%, 0%), 40%);
-
-      &:hover {
-        //assombrit le texte de 40%
-        color: mix($color, hsl(0, 0%, 0%), 40%);
-        //éclaircit le fond de 40%
-        background-color: mix($color, hsl(0, 0%, 100%), 50%);
-      }
-
-      //si la luminosité de la teinte est inférieure à 70%
-    } @else {
-      //éclaircit le texte de 80%
-      color: mix($color, hsl(0, 0%, 100%), 20%);
-      background-color: $color;
-
-      &:hover {
-        //assombrit le texte de 40%
-        color: mix($color, hsl(0, 0%, 0%), 30%);
-        //éclaircit le fond de 40%
-        background-color: mix($color, hsl(0, 0%, 100%), 50%);
-      }
-    }
+  &:hover {
+    @include cta-bg-hov;
+    color: white;
+    text-decoration: inherit;
   }
 }

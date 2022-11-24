@@ -1,0 +1,15 @@
+span[name="tag"] {
+  color: darken($tertiary-color, 35);
+  font-weight: map-get($font-weight, bold);
+
+  background-color: $tertiary-color;
+
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+
+  /*top right of the target*/
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+}

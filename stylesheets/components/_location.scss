@@ -1,0 +1,22 @@
+.location {
+  @include flex-r-nw;
+
+  height: 50px;
+  background-color: $mid-grey;
+
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  & input {
+    background-color: unset;
+    border: unset;
+    color: $text-color;
+    font-weight: map-get($font-weight, bold);
+
+    &::placeholder {
+      color: $text-color;
+      font-weight: map-get($font-weight, bold);
+    }
+  }
+}
