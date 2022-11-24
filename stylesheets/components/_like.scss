@@ -1,0 +1,16 @@
+.picto-heart {
+  width: 1.8rem;
+
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /*permet de le remonter au dessus sur pseudo élément a::after*/
+  z-index: 1;
+
+  &:hover {
+    fill: url(#theFillingYourHeartGradient);
+    stroke: url(#theFillingYourHeartGradient);
+  }
+}

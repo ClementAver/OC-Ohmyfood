@@ -1,0 +1,73 @@
+/*main container*/
+.tile {
+  @include box-shadow;
+  @include flex-r-w;
+  justify-content: space-between;
+  gap: 5%;
+
+  /*initialisation of the img hover variable*/
+  --img-scale: 1.1;
+
+  /*means to fixe the next absolute positioning (the link on overlay)*/
+  position: relative;
+
+  border-radius: 16px;
+  background-color: white;
+
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+
+  flex: 1 0 300px;
+
+  /*plays as the container of the img*/
+  & figure {
+    height: 170px;
+
+    margin: 0;
+    margin-bottom: 16px;
+
+    overflow: hidden;
+  }
+
+  & img {
+    width: 100%;
+    /*will scale accordingly to the state of the variable*/
+    transform: scale(var(--img-scale));
+    transform-origin: center;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &__lower-half-cont {
+    @include flex-r-nw;
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  &__lower-half-copy {
+    @include flex-c-nw;
+    padding-right: 16px;
+
+    & h3,
+    p {
+      display: block;
+      width: fit-content;
+    }
+  }
+
+  /*pseudo element overlaying the tile to make it completely clickable*/
+  & a {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+
+  /*.tile:hover*/
+  &:hover {
+    transform: scale(1.02);
+    @include box-shadow-hov;
+    --img-scale: 1.05;
+  }
+}
