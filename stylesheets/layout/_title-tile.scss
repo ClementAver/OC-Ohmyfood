@@ -1,5 +1,5 @@
 /*above-container to expand the background on all the length of the viewport*/
-main:has(> .lay-title-tile) {
+.lay-title-tile-cont {
   background-color: $light-grey;
   @include flex-c-nw;
   align-items: center;
@@ -21,7 +21,7 @@ main:has(> .lay-title-tile) {
     max-width: 1024px;
   }
 
-  & h2 {
+  h2 {
     grid-column: 1 / -1;
   }
 }

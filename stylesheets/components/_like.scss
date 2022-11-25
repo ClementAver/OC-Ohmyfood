@@ -6,7 +6,7 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  /*permet de le remonter au dessus sur pseudo élément a::after*/
+  /*sets it above the pseudo-element a::after*/
   z-index: 1;
 
   &:hover {

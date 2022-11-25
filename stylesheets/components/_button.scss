@@ -6,6 +6,7 @@
   @include cta-bg;
   width: fit-content;
   padding: 16px;
+  border: none;
   border-radius: 32px;
   color: white;
   font-weight: map-get($font-weight, semi-bold);

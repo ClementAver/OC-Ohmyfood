@@ -1,5 +1,5 @@
 /*main container*/
-.tile {
+.restaurant-tile {
   @include box-shadow;
   @include flex-r-w;
   justify-content: space-between;
@@ -20,8 +20,13 @@
   flex: 1 0 300px;
 
   /*plays as the container of the img*/
-  & figure {
+  figure {
     height: 170px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin: 0;
     margin-bottom: 16px;
@@ -29,8 +34,9 @@
     overflow: hidden;
   }
 
-  & img {
+  img {
     width: 100%;
+
     /*will scale accordingly to the state of the variable*/
     transform: scale(var(--img-scale));
     transform-origin: center;
@@ -48,7 +54,7 @@
     @include flex-c-nw;
     padding-right: 16px;
 
-    & h3,
+    h3,
     p {
       display: block;
       width: fit-content;
@@ -56,7 +62,7 @@
   }
 
   /*pseudo element overlaying the tile to make it completely clickable*/
-  & a {
+  a {
     position: absolute;
     inset-block: 0;
     inset-inline: 0;

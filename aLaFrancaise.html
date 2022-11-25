@@ -14,10 +14,10 @@
     <script src="https://kit.fontawesome.com/23e60d5d3c.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="restaurant">
     <!--header-->
     <header>
-      <i class="fa-solid fa-arrow-left"></i>
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
       <svg width="196" height="34" viewBox="0 0 196 34" fill="none">
         <path d="M13.932 7.956C17.196 7.956 19.596 8.61599 21.132 9.936C22.692 11.256 23.472 12.984 23.472 15.12C23.472 15.84 23.376 16.644 23.184 17.532C22.728 19.5 21.876 21.228 20.628 22.716C19.38 24.18 17.844 25.32 16.02 26.136C14.22 26.928 12.264 27.324 10.152 27.324C6.81599 27.324 4.34399 26.664 2.73599 25.344C1.15199 24 0.359985 22.224 0.359985 20.016C0.359985 19.272 0.455985 18.444 0.647985 17.532C1.10399 15.66 1.96799 14.004 3.23999 12.564C4.53599 11.1 6.10799 9.972 7.95599 9.18C9.82799 8.364 11.82 7.956 13.932 7.956ZM13.824 11.16C13.32 11.16 12.78 11.616 12.204 12.528C11.652 13.416 10.992 15.108 10.224 17.604C9.45599 20.1 9.07199 21.852 9.07199 22.86C9.07199 23.388 9.15599 23.748 9.32399 23.94C9.49199 24.108 9.71999 24.192 10.008 24.192C10.512 24.24 11.028 23.808 11.556 22.896C12.108 21.984 12.792 20.208 13.608 17.568C14.352 15.24 14.724 13.548 14.724 12.492C14.724 11.988 14.64 11.64 14.472 11.448C14.328 11.256 14.112 11.16 13.824 11.16Z" fill="#101010" />
         <path
@@ -52,102 +52,116 @@
     </header>
 
     <!--cover photo-->
-    <img src="assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assiette composée de viande crue avec crème et légumes feuillus." />
+    <img class="cover" src="assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assiette composée de viande crue avec crème et légumes feuillus." />
     <!--Restaurant-->
-    <main>
+    <main class="main">
       <section>
         <h1>À la française</h1>
-        <svg viewBox="0 0 22.28 21">
-          <path class="picto--heart" d="M11.14,20.5S2.44,12,1.2,9.06C-1,4,2.25.5,6.14.5a5.6,5.6,0,0,1,5,3,5.6,5.6,0,0,1,5-3C20,.5,23.25,4,21.09,9.06,19.85,12,11.14,20.5,11.14,20.5Z" />
+        <svg class="picto-heart" viewBox="0 0 22.28 21">
+          <defs>
+            <linearGradient id="theFillingYourHeartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" id="primary-gradient-color" />
+              <stop offset="100%" id="secondary-gradient-color" />
+            </linearGradient>
+          </defs>
+          <path d="M11.14,20.5S2.44,12,1.2,9.06C-1,4,2.25.5,6.14.5a5.6,5.6,0,0,1,5,3,5.6,5.6,0,0,1,5-3C20,.5,23.25,4,21.09,9.06,19.85,12,11.14,20.5,11.14,20.5Z" />
         </svg>
       </section>
 
-      <section>
+      <section class="dish">
         <h2>Entrées</h2>
-        <article>
-          <div>
+        <div></div>
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Tartare de poulpe acidulé</h3>
-            <p>Aux Zestes d'orange</p>
-            <p>25€</p>
+            <p>Aux zestes d'orange</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">25€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
-        <article>
-          <div>
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Velouté de légumes d'antan</h3>
-            <p>Carotte, Panais, topinambour</p>
-            <p>35€</p>
+            <p>Carotte, panais, topinambour</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">35€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
-        <article>
-          <div>
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Soupe à l'oignon</h3>
             <p>Revisitée</p>
-            <p>20€</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">20€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
       </section>
 
-      <section>
+      <section class="dish">
         <h2>Plats</h2>
-        <article>
-          <div>
+        <div></div>
+
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Coquilles Saint-Jacques</h3>
             <p>Accompagnées d'une purée de panais</p>
-            <p>40€</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">40€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
-        <article>
-          <div>
+
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Magret de canard</h3>
             <p>Et parmentier de pommes de terre</p>
-            <p>35€</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">35€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
-        <article>
-          <div>
-            <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
+            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
             <p>Sur son lit de gnocchis aux légumes</p>
-            <p>44€</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">44€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
       </section>
 
-      <section>
+      <section class="dish">
         <h2>Desserts</h2>
-        <article>
-          <div>
+        <div></div>
+
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Pétales de violettes glacés</h3>
             <p>Et purée de noisettes</p>
-            <p>18€</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">18€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
-        <article>
-          <div>
+
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Fondant au chocolat</h3>
             <p>Revisité</p>
-            <p>22€</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">22€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
-        <article>
-          <div>
+
+        <article class="menu-tile">
+          <div class="menu-tile__menu-text">
             <h3>Millefeuille croustillant</h3>
-            <p>Myrtilles et pâte d'amande</p>
-            <p>23€</p>
+            <p>Myrtilles et pâte d’amande</p>
           </div>
-          <button type="button"><i class="fa-solid fa-circle-check"></i></button>
+          <p class="menu-tile__menu-price">23€</p>
+          <button class="add-to-cart" type="button"><i class="fa-solid fa-circle-check"></i></button>
         </article>
       </section>
-
       <section>
-        <button>Commander</button>
+        <button type="button" class="btn">Commander</button>
       </section>
     </main>
     <!--footer-->
@@ -184,8 +198,8 @@
         />
       </svg>
 
-      <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-      <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+      <a href="#" class="icon-text-footer"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+      <a href="#" class="icon-text-footer"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
       <a href="#">Mentions légales</a>
       <a href="#">Contact</a>
     </footer>
