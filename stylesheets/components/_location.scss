@@ -16,6 +16,7 @@
 
     &::placeholder {
       color: $text-color;
+      opacity: 1;
       font-weight: map-get($font-weight, bold);
     }
   }

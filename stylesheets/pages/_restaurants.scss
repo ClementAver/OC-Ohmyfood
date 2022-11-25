@@ -11,8 +11,6 @@
 
     margin: auto;
 
-    align-self: center;
-
     @media screen and (min-width: map-get($breakpoints, large)) {
       max-width: 1024px;
     }

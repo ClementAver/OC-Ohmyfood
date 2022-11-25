@@ -12,7 +12,7 @@
 
   border-radius: 1rem;
 
-  &__menu-text {
+  &__text {
     padding: 1rem;
     width: 100%;
     overflow: hidden;
@@ -25,7 +25,7 @@
     }
   }
 
-  &__menu-price {
+  &__price {
     font-weight: map-get($font-weight, bold);
 
     margin-top: auto;

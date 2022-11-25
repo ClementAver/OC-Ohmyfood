@@ -2,16 +2,14 @@
 .restaurant-tile {
   @include box-shadow;
   @include flex-r-w;
-  justify-content: space-between;
-  gap: 5%;
 
   /*initialisation of the img hover variable*/
-  --img-scale: 1.1;
+  --img-scale: 105%;
 
   /*means to fixe the next absolute positioning (the link on overlay)*/
   position: relative;
 
-  border-radius: 16px;
+  border-radius: 1rem;
   background-color: white;
 
   transition: all 0.15s ease-in-out;
@@ -29,7 +27,7 @@
     align-items: center;
 
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
     overflow: hidden;
   }
@@ -47,12 +45,12 @@
     @include flex-r-nw;
     width: 100%;
     justify-content: space-between;
-    padding: 16px;
+    padding: 1rem;
   }
 
-  &__lower-half-copy {
+  &__lower-half-text {
     @include flex-c-nw;
-    padding-right: 16px;
+    padding-right: 1rem;
 
     h3,
     p {
@@ -67,13 +65,12 @@
     inset-block: 0;
     inset-inline: 0;
     cursor: pointer;
-    content: "";
   }
 
   /*.tile:hover*/
   &:hover {
-    transform: scale(1.02);
+    transform: scale(105%);
     @include box-shadow-hov;
-    --img-scale: 1.05;
+    --img-scale: 100%;
   }
 }
