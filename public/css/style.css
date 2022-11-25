@@ -486,11 +486,8 @@ footer a {
   gap: 8px;
   align-items: baseline;
 }
-footer a:has(i) {
+footer a.icon-text-footer {
   font-weight: 500;
-}
-footer a:not(:has(i)) {
-  font-weight: 400;
 }
 
 .hero {
@@ -574,7 +571,7 @@ footer a:not(:has(i)) {
 }
 
 /*above-container to expand the background on all the length of the viewport*/
-main:has(> .lay-title-tile) {
+.lay-title-tile-cont {
   background-color: hsl(0deg, 0%, 97%);
   display: flex;
   flex-flow: column nowrap;
@@ -688,6 +685,10 @@ span[name=tag] {
 }
 .restaurant-tile figure {
   height: 170px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   margin-bottom: 16px;
   overflow: hidden;
@@ -798,14 +799,14 @@ span[name=tag] {
     max-width: 1024px;
   }
 }
-.restaurant main > section:has(h1) {
+.restaurant main > section:first-child {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
   justify-content: space-between;
   align-items: baseline;
 }
-.restaurant main > section:has(h2) {
+.restaurant main .dish {
   margin-bottom: 2rem;
   width: 100%;
 }

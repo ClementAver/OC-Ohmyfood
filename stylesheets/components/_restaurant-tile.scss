@@ -22,6 +22,11 @@
   /*plays as the container of the img*/
   figure {
     height: 170px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin: 0;
     margin-bottom: 16px;
@@ -31,6 +36,7 @@
 
   img {
     width: 100%;
+
     /*will scale accordingly to the state of the variable*/
     transform: scale(var(--img-scale));
     transform-origin: center;

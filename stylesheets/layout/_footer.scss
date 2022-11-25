@@ -28,13 +28,9 @@ footer {
     @include flex-r-nw;
     gap: 8px;
     align-items: baseline;
-  }
 
-  a:has(i) {
-    font-weight: map-get($font-weight, medium);
-  }
-
-  a:not(:has(i)) {
-    font-weight: map-get($font-weight, regular);
+    &.icon-text-footer {
+      font-weight: map-get($font-weight, medium);
+    }
   }
 }

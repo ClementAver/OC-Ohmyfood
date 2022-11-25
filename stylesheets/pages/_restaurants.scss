@@ -24,7 +24,7 @@
     background-color: $light-grey;
     border-radius: 32px 32px 0 0;
 
-    > section:has(h1) {
+    > section:first-child {
       @include flex-r-nw;
 
       width: 100%;
@@ -33,7 +33,7 @@
       align-items: baseline;
     }
 
-    > section:has(h2) {
+    .dish {
       margin-bottom: 2rem;
       width: 100%;
     }
