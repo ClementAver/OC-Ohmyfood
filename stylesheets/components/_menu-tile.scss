@@ -5,7 +5,6 @@
   overflow: hidden;
 
   --add-to-cart: -4rem;
-  --add-to-cart-i: 180deg;
 
   background-color: white;
   margin-bottom: 1rem;
@@ -35,6 +34,15 @@
 
   &:hover {
     --add-to-cart: 0rem;
-    --add-to-cart-i: 0deg;
+    i {
+      animation: turns-in 0.35s 0.15s backwards;
+    }
+  }
+
+  /*animation delay*/
+  @for $i from 1 through 4 {
+    &--delay-#{$i} {
+      animation: slide-up 1s (($i * 200)-200ms) cubic-bezier(0.2, 0.5, 0.5, 1) backwards;
+    }
   }
 }
