@@ -432,6 +432,22 @@ h3 {
   width: 1px;
 }
 
+/*cta 'like'*/
+@keyframes fillinYourHeart {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*menu-tiles*/
 @keyframes slide-up {
   from {
     opacity: 0;
@@ -442,6 +458,7 @@ h3 {
     transform: translateY(0px);
   }
 }
+/*selection div icon*/
 @keyframes turns-in {
   from {
     transform: scale(1.4) rotate(-270deg);
@@ -666,16 +683,27 @@ span[name=tag] {
 
 .picto-heart {
   width: 1.8rem;
-  fill: none;
-  stroke: black;
-  stroke-linecap: round;
-  stroke-linejoin: round;
   /*sets it above the pseudo-element a::after*/
   z-index: 1;
 }
 .picto-heart:hover {
+  /*launch animation on .theHoleInYourHeart */
+  --hover-anim: fillinYourHeart 1s forwards;
+}
+
+.theShapeOfYourHeart {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theHoleInYourHeart {
   fill: url(#theFillingYourHeartGradient);
   stroke: url(#theFillingYourHeartGradient);
+  transform-origin: center;
+  transform: scale(0);
+  animation: var(--hover-anim);
 }
 
 /*main container*/
