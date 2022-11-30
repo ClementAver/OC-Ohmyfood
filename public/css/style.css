@@ -172,9 +172,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -182,9 +182,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -193,9 +193,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -239,8 +239,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -248,8 +248,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -257,7 +257,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -265,7 +265,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -336,7 +336,10 @@ a {
   color: hsl(267deg, 66%, 60%);
   text-decoration: none;
 }
-a:hover, a:active, a:focus, a:focus-within {
+a:hover,
+a:active,
+a:focus,
+a:focus-within {
   color: hsl(267deg, 66%, 60%);
 }
 
@@ -423,7 +426,7 @@ h3 {
  */
 .visually-hidden {
   border: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -432,10 +435,38 @@ h3 {
   width: 1px;
 }
 
-/*cta 'like'*/
+/*loader container*/
+@keyframes loader {
+  0% {
+    z-index: 1000;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1000;
+  }
+}
+/*cta 'like' -fill*/
 @keyframes fillinYourHeart {
   0% {
     transform: scale(0);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*cta 'like' -stroke*/
+@keyframes fillinYourHeartStroke {
+  0% {
+    transform: scale(1);
   }
   50% {
     transform: scale(0.7);
@@ -630,6 +661,46 @@ footer a.icon-text-footer {
   grid-column: 1/-1;
 }
 
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -100;
+  animation: loader 3s;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /*animation delay*/
+}
+.loader div {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+}
+.loader div:first-child {
+  background-color: hsl(267deg, 66%, 60%);
+}
+.loader div:nth-child(2) {
+  background-color: hsl(317deg, 100%, 74%);
+}
+.loader div:nth-child(3) {
+  background-color: hsl(165deg, 56%, 74%);
+}
+.loader__point-1 {
+  animation: slide-up 0.5s cubic-bezier(0.2, 0.5, 0.5, 1) 0ms 6 alternate both;
+}
+.loader__point-2 {
+  animation: slide-up 0.5s cubic-bezier(0.2, 0.5, 0.5, 1) 100ms 6 alternate both;
+}
+.loader__point-3 {
+  animation: slide-up 0.5s cubic-bezier(0.2, 0.5, 0.5, 1) 200ms 6 alternate both;
+}
+
 .btn {
   box-shadow: 0px 4px 4px hsla(0deg, 0%, 0%, 0.16);
   background: linear-gradient(0deg, hsl(267deg, 66%, 60%), hsl(317deg, 100%, 74%));
@@ -668,7 +739,7 @@ footer a.icon-text-footer {
   font-weight: 700;
 }
 
-span[name=tag] {
+span.tag {
   color: #2c9b7f;
   font-weight: 700;
   background-color: hsl(165deg, 56%, 74%);
@@ -688,7 +759,8 @@ span[name=tag] {
 }
 .picto-heart:hover {
   /*launch animation on .theHoleInYourHeart */
-  --hover-anim: fillinYourHeart 1s forwards;
+  --hover-anim-fill: fillinYourHeart 1s forwards;
+  --hover-anim-stroke: fillinYourHeartStroke 1s forwards;
 }
 
 .theShapeOfYourHeart {
@@ -696,6 +768,8 @@ span[name=tag] {
   stroke: black;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transform-origin: center;
+  animation: var(--hover-anim-stroke);
 }
 
 .theHoleInYourHeart {
@@ -703,7 +777,7 @@ span[name=tag] {
   stroke: url(#theFillingYourHeartGradient);
   transform-origin: center;
   transform: scale(0);
-  animation: var(--hover-anim);
+  animation: var(--hover-anim-fill);
 }
 
 /*main container*/

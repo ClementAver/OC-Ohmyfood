@@ -1,7 +1,37 @@
-/*cta 'like'*/
+/*loader container*/
+@keyframes loader {
+  0% {
+    z-index: 1000;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1000;
+  }
+}
+
+/*cta 'like' -fill*/
 @keyframes fillinYourHeart {
   0% {
     transform: scale(0);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*cta 'like' -stroke*/
+@keyframes fillinYourHeartStroke {
+  0% {
+    transform: scale(1);
   }
   50% {
     transform: scale(0.7);

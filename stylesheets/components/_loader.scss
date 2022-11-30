@@ -1,0 +1,40 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -100;
+  animation: loader 3s;
+
+  @include flex_r_nw;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  & div {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+
+    &:first-child {
+      background-color: $primary-color;
+    }
+
+    &:nth-child(2) {
+      background-color: $secondary-color;
+    }
+
+    &:nth-child(3) {
+      background-color: $tertiary-color;
+    }
+  }
+
+  /*animation delay*/
+  @for $i from 1 through 3 {
+    &__point-#{$i} {
+      animation: slide-up 0.5s cubic-bezier(0.2, 0.5, 0.5, 1) (($i * 100)-100ms) 6 alternate both;
+    }
+  }
+}

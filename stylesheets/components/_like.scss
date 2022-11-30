@@ -7,7 +7,8 @@
 
   &:hover {
     /*launch animation on .theHoleInYourHeart */
-    --hover-anim: fillinYourHeart 1s forwards;
+    --hover-anim-fill: fillinYourHeart 1s forwards;
+    --hover-anim-stroke: fillinYourHeartStroke 1s forwards;
   }
 }
 
@@ -16,6 +17,8 @@
   stroke: black;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transform-origin: center;
+  animation: var(--hover-anim-stroke);
 }
 
 .theHoleInYourHeart {
@@ -23,5 +26,5 @@
   stroke: url(#theFillingYourHeartGradient);
   transform-origin: center;
   transform: scale(0);
-  animation: var(--hover-anim);
+  animation: var(--hover-anim-fill);
 }
