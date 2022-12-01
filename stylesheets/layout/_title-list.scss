@@ -3,7 +3,7 @@
   @include pad-cont;
 
   @media screen and (min-width: map-get($breakpoints, large)) {
-    width: 1024px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -11,6 +11,7 @@
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
 
     gap: 16px;
     counter-reset: counter-one;
