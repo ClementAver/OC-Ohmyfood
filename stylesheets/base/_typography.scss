@@ -3,5 +3,23 @@
  */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font: normal 100% / 1.2 $text-font-stack;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
 }

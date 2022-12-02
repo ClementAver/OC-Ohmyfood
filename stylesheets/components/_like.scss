@@ -1,0 +1,30 @@
+.picto-heart {
+  width: 1.8rem;
+
+  /*sets it above the pseudo-element a::after*/
+  z-index: 1;
+  $hover-anim: "";
+
+  &:hover {
+    /*launch animation on .theHoleInYourHeart */
+    --hover-anim-fill: fillinYourHeart 1s forwards;
+    --hover-anim-stroke: fillinYourHeartStroke 1s forwards;
+  }
+}
+
+.theShapeOfYourHeart {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: center;
+  animation: var(--hover-anim-stroke);
+}
+
+.theHoleInYourHeart {
+  fill: url(#theFillingYourHeartGradient);
+  stroke: url(#theFillingYourHeartGradient);
+  transform-origin: center;
+  transform: scale(0);
+  animation: var(--hover-anim-fill);
+}

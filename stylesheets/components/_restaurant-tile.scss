@@ -1,0 +1,76 @@
+/*main container*/
+.restaurant-tile {
+  @include box-shadow;
+  @include flex-r-w;
+
+  /*initialisation of the img hover variable*/
+  --img-scale: 105%;
+
+  /*means to fixe the next absolute positioning (the link on overlay)*/
+  position: relative;
+
+  border-radius: 1rem;
+  background-color: white;
+
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+
+  flex: 1 0 300px;
+
+  /*plays as the container of the img*/
+  figure {
+    height: 170px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    margin-bottom: 1rem;
+
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+
+    /*will scale accordingly to the state of the variable*/
+    transform: scale(var(--img-scale));
+    transform-origin: center;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &__lower-half-cont {
+    @include flex-r-nw;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  &__lower-half-text {
+    @include flex-c-nw;
+    padding-right: 1rem;
+
+    h3,
+    p {
+      display: block;
+      width: fit-content;
+    }
+  }
+
+  /*pseudo element overlaying the tile to make it completely clickable*/
+  a {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+  }
+
+  /*.tile:hover*/
+  &:hover {
+    transform: scale(105%);
+    @include box-shadow-hov;
+    --img-scale: 100%;
+  }
+}

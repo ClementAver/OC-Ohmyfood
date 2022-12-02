@@ -1,0 +1,17 @@
+.add-to-cart {
+  width: 4rem;
+
+  margin-right: var(--add-to-cart);
+
+  border: none;
+  border-radius: 0 16px 16px 0;
+  background-color: $tertiary-color;
+
+  color: white;
+
+  transition: all 0.5s;
+
+  i {
+    transform: scale(1.4);
+  }
+}
