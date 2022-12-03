@@ -17,8 +17,8 @@
 
   flex: 1 0 300px;
 
-  /*plays as the container of the img*/
   figure {
+    /*plays as the container of the img*/
     height: 170px;
     width: 100%;
 
@@ -59,16 +59,16 @@
     }
   }
 
-  /*pseudo element overlaying the tile to make it completely clickable*/
   a {
+    /*pseudo element overlaying the tile to make it completely clickable*/
     position: absolute;
     inset-block: 0;
     inset-inline: 0;
     cursor: pointer;
   }
 
-  /*.tile:hover*/
   &:hover {
+    /*.tile:hover*/
     transform: scale(105%);
     @include box-shadow-hov;
     --img-scale: 100%;

@@ -31,7 +31,7 @@
     }
   }
 
-  /*animation delay*/
+  /*generate classes for animation delay*/
   @for $i from 1 through 3 {
     &__point-#{$i} {
       animation: slide-up 0.5s cubic-bezier(0.2, 0.5, 0.5, 1) (($i * 100)-100ms) 4 alternate both;

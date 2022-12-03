@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
-
 /**
  * Set up a decent box model on the root element
  */
@@ -39,6 +35,7 @@ ul {
   margin: 0;
 }
 
+/*❤ cta*/
 #primary-gradient-color {
   stop-color: $primary-color;
   stop-opacity: 1;

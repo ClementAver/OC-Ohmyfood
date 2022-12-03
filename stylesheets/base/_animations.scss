@@ -1,4 +1,4 @@
-/*loader container*/
+//loader container
 @keyframes loader {
   0% {
     z-index: 1000;
@@ -12,7 +12,7 @@
   }
 }
 
-/*cta 'like' -fill*/
+//cta 'like' -fill
 @keyframes fillinYourHeart {
   0% {
     transform: scale(0);
@@ -28,7 +28,7 @@
   }
 }
 
-/*cta 'like' -stroke*/
+//cta 'like' -stroke
 @keyframes fillinYourHeartStroke {
   0% {
     transform: scale(1);
@@ -44,7 +44,7 @@
   }
 }
 
-/*menu-tiles*/
+//menu-tiles
 @keyframes slide-up {
   from {
     opacity: 0;
@@ -56,7 +56,7 @@
   }
 }
 
-/*selection div icon*/
+//selection div icon
 @keyframes turns-in {
   from {
     transform: scale(1.4) rotate(-270deg);
