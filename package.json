@@ -4,7 +4,7 @@
   "description": "P3 - Dynamisez une page web avec des animations CSS",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./stylesheets/main.scss:./public/css/style.css --style expanded",
+    "sass": "sass --watch ./stylesheets/main.scss:./public/css/style.css --style compressed",
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "author": "Clément Aver",

@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+@import "abstracts/variables", "abstracts/mixins";
 
 // 2. Vendors
 @import "vendors/normalize";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/helpers", "base/animations";
+@import "base/base", "base/fonts", "base/typography", "base/animations";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer", "layout/hero", "layout/title-list", "layout/title-tile";
@@ -16,7 +16,4 @@
 @import "components/loader", "components/button", "components/location", "components/tile-tag", "components/like", "components/restaurant-tile", "components/menu-tile", "components/add-to-cart";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/restaurants";
-
-// 7. Themes
-@import "themes/default";
+@import "pages/restaurants";

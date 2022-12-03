@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
-
 /// Event wrapper
 /// @author Harry Roberts
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -22,15 +18,6 @@
     &:focus-within {
       @content;
     }
-  }
-}
-
-/// Make a context based selector a little more friendly
-/// @author Kitty Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
   }
 }
 
@@ -76,7 +63,7 @@
   background: linear-gradient($direction, lighten($color, 5), lighten($color-two, 5));
 }
 
-/*container padding suppervisor*/
+//container padding suppervisor
 @mixin pad-cont {
   padding: (46px 16px 56px 16px);
 }
