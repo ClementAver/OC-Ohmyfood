@@ -1,8 +1,3 @@
-
-<p align="center">
-<img src="public/assets/README/Ohmyfood_sticker.png" alt="Mockup of the project's logo" width="300"/>
-</p>
-
 # Ohmyfood
 
 <div>
